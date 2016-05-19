@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/hero_banner_head_bg">
+    <ImageButton
+        android:id="@+id/title_center_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_selector_header_person_center"
+        />
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新闻资讯"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+    <ImageButton
+        android:id="@+id/title_check_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/tab_selector_global_search"/>
+    <ImageButton
+        android:id="@+id/title_download_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="@drawable/tab_selector_video_download"/>
+
+</RelativeLayout>

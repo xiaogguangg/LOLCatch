@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/mediacontroller_topbar_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/usershow_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@mipmap/btn_attention_nor">
+
+            <ImageView
+                android:id="@+id/usershow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/community_usershow_icon" />
+            <TextView
+                android:id="@+id/usershow_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usershow_iv"
+                android:text="真人秀"
+               android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@color/gray"/>
+
+            <ImageView
+                android:id="@+id/usershow_in_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/go_btn"/>
+
+            <TextView
+                android:id="@+id/usershow_in_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/usershow_in_iv"
+                android:text="进入"
+                android:textColor="@color/gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/usershow_iv"
+                android:scaleType="fitXY"
+                android:src="@mipmap/community_usershow_default"
+                android:padding="@dimen/activity_vertical_margin"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equipment_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@mipmap/btn_attention_nor">
+
+            <ImageView
+                android:id="@+id/equip_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/community_equipment_icon"
+                />
+
+            <TextView
+                android:id="@+id/equip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/equip_iv"
+                android:text="晒玩法"
+                android:textColor="@color/gray"
+                android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+            <ImageView
+                android:id="@+id/equip_in_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/go_btn"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/equip_in_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/equip_in_iv"
+                android:text="进入"
+                android:textColor="@color/gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/equip_iv"
+                android:scaleType="fitXY"
+                android:src="@mipmap/community_equipment_default"
+                android:padding="@dimen/activity_vertical_margin"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/find_friend_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@mipmap/btn_attention_nor">
+
+            <ImageView
+                android:id="@+id/find_friend_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/community_find_friend_icon" />
+
+            <TextView
+                android:id="@+id/find_friend_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/find_friend_iv"
+                android:text="找战友"
+                android:textColor="@color/gray"
+                android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+            <ImageView
+                android:id="@+id/find_friend_in_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/go_btn"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/find_friend_in_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/find_friend_in_iv"
+                android:text="进入"
+                android:textColor="@color/gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/find_friend_iv"
+                android:scaleType="fitXY"
+                android:src="@mipmap/community_find_friend_default"
+                android:padding="@dimen/activity_vertical_margin"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
