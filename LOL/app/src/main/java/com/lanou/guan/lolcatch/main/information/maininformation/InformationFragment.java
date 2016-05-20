@@ -6,10 +6,11 @@ import android.view.View;
 
 import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.BaseFragment;
-import com.lanou.guan.lolcatch.main.information.News.NewsFragment;
-import com.lanou.guan.lolcatch.main.information.match.MatchFragment;
-import com.lanou.guan.lolcatch.main.information.newest.NewestFragment;
-import com.lanou.guan.lolcatch.main.information.recreation.RecreationFragment;
+import com.lanou.guan.lolcatch.main.information.adapter.InformationAdapter;
+import com.lanou.guan.lolcatch.main.information.detailfragment.NewsFragment;
+import com.lanou.guan.lolcatch.main.information.detailfragment.MatchFragment;
+import com.lanou.guan.lolcatch.main.information.detailfragment.NewestFragment;
+import com.lanou.guan.lolcatch.main.information.detailfragment.RecreationFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,5 +66,6 @@ public class InformationFragment extends BaseFragment {
         baseFragments.add(new NewsFragment());
         baseFragments.add(new MatchFragment());
         baseFragments.add(new RecreationFragment());
+
     }
 }

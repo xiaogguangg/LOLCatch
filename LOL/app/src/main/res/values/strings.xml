@@ -3,4 +3,10 @@
     <string name="check_name">战绩查询</string>
     <string name="match_name">赛事</string>
     <string name="hero_name">英雄榜</string>
+    <string name="information_detail_title">掌游宝</string>
+    <string name="collect">收藏</string>
+    <string name="share">分享</string>
+    <string name="dayOrNight">日间模式</string>
+    <string name="refresh">刷新</string>
+    <string name="typeface">字体</string>
 </resources>

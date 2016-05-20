@@ -12,7 +12,7 @@
         <RelativeLayout
             android:id="@+id/usershow_click_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero"
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/activity_horizontal_margin"
@@ -62,7 +62,7 @@
         <RelativeLayout
             android:id="@+id/equipment_click_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero"
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/activity_horizontal_margin"
@@ -113,7 +113,7 @@
         <RelativeLayout
             android:id="@+id/find_friend_click_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero"
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/activity_horizontal_margin"

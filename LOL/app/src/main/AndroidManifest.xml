@@ -20,8 +20,9 @@
         <activity android:name=".main.main.CheckActivity"/>
         <activity android:name=".main.main.DownLoadActivity"/>
         <activity android:name=".main.community.usershow.UserActivity"/>
-        <activity android:name=".main.video.mainvideo.entertainment.details.EntertainmentActivity"/>
-        <activity android:name=".main.video.mainvideo.entertainment.details.VideoDetailActivity"/>
+        <activity android:name=".main.video.mainvideo.video_detail.details.VideoListActivity"/>
+        <activity android:name=".main.video.mainvideo.video_detail.details.VideoDetailActivity"/>
+        <activity android:name=".main.information.maininformation.InformationDetailAty"/>
     </application>
 
 </manifest>

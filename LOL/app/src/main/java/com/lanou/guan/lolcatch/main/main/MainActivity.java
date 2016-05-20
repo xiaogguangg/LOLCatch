@@ -16,7 +16,7 @@ import com.lanou.guan.lolcatch.main.community.maincommunity.CommunityFragment;
 import com.lanou.guan.lolcatch.main.hero.mainhero.HeroFragment;
 import com.lanou.guan.lolcatch.main.information.maininformation.InformationFragment;
 import com.lanou.guan.lolcatch.main.more.MoreFragment;
-import com.lanou.guan.lolcatch.main.video.mainvideo.mainvideo.VideoFragment;
+import com.lanou.guan.lolcatch.main.video.mainvideo.video.VideoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
