@@ -79,6 +79,17 @@
             android:background="@mipmap/menu_bg"
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
         </RelativeLayout>
     </android.support.v4.widget.DrawerLayout>
 </RelativeLayout>

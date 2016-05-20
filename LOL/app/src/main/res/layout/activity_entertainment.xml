@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/hero_banner_head_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/entertainment_title_iv"
+            android:layout_width="@dimen/activity_entertainment_padding"
+            android:layout_height="@dimen/activity_entertainment_padding"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/entertainment_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11111111"
+            android:textColor="@color/gray"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/entertainment_title_iv" />
+        <TextView
+            android:id="@+id/entertainment_article_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="111111111"
+            android:textColor="@color/gray"
+            android:layout_toRightOf="@id/entertainment_title_iv"
+            android:layout_below="@id/entertainment_title_tv"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/entertainment_aty_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

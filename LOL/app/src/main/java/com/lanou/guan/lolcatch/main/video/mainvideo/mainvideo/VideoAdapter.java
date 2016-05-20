@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class VideoAdapter extends FragmentPagerAdapter {
     private List<BaseFragment> baseFragments;
-    private String[] title = {"娱乐" , "解说" , "赛事"};
+    private String [] title = {"娱乐","解说","赛事"};
     public void setBaseFragments(List<BaseFragment> baseFragments) {
         this.baseFragments = baseFragments;
     }

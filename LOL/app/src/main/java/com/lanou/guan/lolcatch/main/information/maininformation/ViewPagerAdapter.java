@@ -12,14 +12,13 @@ import java.util.List;
  */
 public class ViewPagerAdapter extends PagerAdapter {
     List<ImageView> imageViews;
-
     public ViewPagerAdapter(List<ImageView> imageViews) {
         this.imageViews = imageViews;
     }
 
     @Override
     public int getCount() {
-        return imageViews.size();
+        return imageViews == null ? 0 :imageViews.size();
     }
 
     @Override

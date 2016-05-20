@@ -35,8 +35,10 @@ public class NewestFragment extends BaseFragment {
     private ListView listView;
     private NewestAdapter newestAdapter;
     private List<ImageView> imageViews;
+    private ImageView imageView;
     private ViewPager imageVp;
     private Bean bean;
+    private ChangeImageBean imageBean;
     private int oldPosition = 0;
     private int currentItem;
     private ScheduledExecutorService scheduledExecutorService;
@@ -83,18 +85,26 @@ public class NewestFragment extends BaseFragment {
     }
 
     public void initImageView() {
-        imageViews = new ArrayList<>();
-        List<String> urls = new ArrayList<>();
-        urls.add(URLTool.INFORMATION_IMAGE_FIRST);
-        urls.add(URLTool.INFORMATION_IMAGE_SECOND);
-        urls.add(URLTool.INFORMATION_IMAGE_THIRD);
-        urls.add(URLTool.INFORMATION_IMAGE_FOURTH);
-        for (int i = 0; i < urls.size(); i++) {
-            ImageView imageView = new ImageView(this.getActivity());
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            Picasso.with(context).load(urls.get(i)).into(imageView);
-            imageViews.add(imageView);
-        }
+        RequestQueue imageQueue = Volley.newRequestQueue(getContext());
+        GsonRequest<ChangeImageBean> imageGsonRequest = new GsonRequest<>(com.android.volley.Request.Method.GET, " http://lol.zhangyoubao.com/apis/rest/ItemsService/ads?&i_=EAC1B788-00BC-454A-A9B9-460852CFC011&t_=1438744725&p_=16520&v_=40050303&d_=ios&osv_=8.3&version=0&a_=lol", new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        }, new Response.Listener<ChangeImageBean>() {
+            @Override
+            public void onResponse(ChangeImageBean response) {
+                imageBean = response;
+                imageViews = new ArrayList<>();
+                for (int i = 0; i < imageBean.getData().size(); i++) {
+                    imageView = new ImageView(context);
+                    imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                    Picasso.with(context).load(imageBean.getData().get(i).getPic_ad_url()).into(imageView);
+                    imageViews.add(imageView);
+
+                }
+            }
+        }, ChangeImageBean.class);
+        imageQueue.add(imageGsonRequest);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
