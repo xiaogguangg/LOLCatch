@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <VideoView
-        android:id="@+id/newest_vv"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/newest_iv"
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:visibility="gone"/>
+        android:layout_weight="1" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
-        android:layout_weight="2">
+        android:layout_weight="3">
     <TextView
         android:id="@+id/newest_title_tv"
         android:layout_width="wrap_content"
@@ -25,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero"
         android:layout_weight="1"
+        android:textSize="10sp"
         android:paddingLeft="@dimen/activity_horizontal_margin"/>
     </LinearLayout>
 </LinearLayout>

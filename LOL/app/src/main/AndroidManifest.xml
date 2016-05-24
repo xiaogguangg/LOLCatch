@@ -23,6 +23,10 @@
         <activity android:name=".main.video.mainvideo.video_detail.details.VideoListActivity"/>
         <activity android:name=".main.video.mainvideo.video_detail.details.VideoDetailActivity"/>
         <activity android:name=".main.information.maininformation.InformationDetailAty"/>
+        <activity android:name=".main.main.LogInActivity"/>
+        <activity android:name=".main.more.match.MatchActivity"/>
+        <activity android:name=".main.community.play_way.PlayWayActivity"/>
+        <activity android:name=".main.hero.mainhero.HeroDetailActivity"/>
     </application>
 
 </manifest>

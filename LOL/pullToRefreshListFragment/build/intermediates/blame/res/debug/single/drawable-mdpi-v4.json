@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/res/merged/debug/drawable-mdpi-v4/default_ptr_rotate.png",
+        "source": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/exploded-aar/LOL/library/unspecified/res/drawable-mdpi-v4/default_ptr_rotate.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/res/merged/debug/drawable-mdpi-v4/default_ptr_flip.png",
+        "source": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/exploded-aar/LOL/library/unspecified/res/drawable-mdpi-v4/default_ptr_flip.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/res/merged/debug/drawable-mdpi-v4/indicator_arrow.png",
+        "source": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/exploded-aar/LOL/library/unspecified/res/drawable-mdpi-v4/indicator_arrow.png"
+    }
+]

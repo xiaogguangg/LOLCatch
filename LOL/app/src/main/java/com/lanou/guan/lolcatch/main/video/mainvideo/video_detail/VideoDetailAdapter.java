@@ -62,7 +62,7 @@ public class VideoDetailAdapter extends RecyclerView.Adapter<VideoDetailAdapter.
 
     @Override
     public int getItemCount() {
-        return bean == null ? 0 : bean.getData().get(0).getCatword_id().size();
+        return bean == null ? 0 : bean.getData().get(pos).getCatword_id().size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{

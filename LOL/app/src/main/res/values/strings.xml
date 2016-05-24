@@ -1,6 +1,30 @@
 <resources>
+
     <string name="app_name">LOLCatch</string>
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+    <string name="load">上拉加载</string>
+
     <string name="check_name">战绩查询</string>
+    <string name="match">赛事</string>
+    <string name="herolist">英雄榜</string>
+    <string name="glod">大神榜</string>
+    <string name="splendred">精彩专栏</string>
+    <string name="talent">s6天赋模拟</string>
+    <string name="rune">符文模拟</string>
+    <string name="summoner">召唤师技能</string>
+    <string name="equip">装备查询</string>
+    <string name="bells">铃声</string>
+    <string name="wallpaper">壁纸</string>
+    <string name="novel">小说</string>
+    <string name="store">商城</string>
+    <string name="entertainment">娱乐</string>
+
     <string name="match_name">赛事</string>
     <string name="hero_name">英雄榜</string>
     <string name="information_detail_title">掌游宝</string>
@@ -9,4 +33,47 @@
     <string name="dayOrNight">日间模式</string>
     <string name="refresh">刷新</string>
     <string name="typeface">字体</string>
+    <string name="spin_region">全部大区</string>
+    <string name="spin_newest">最新</string>
+    <string name="spin_sex">性别</string>
+    <string-array name="sex_all">
+        <item>全部</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="more">
+        <item>最新</item>
+        <item>日榜</item>
+        <item>周榜</item>
+        <item>总榜</item>
+    </string-array>
+    <string-array name="different_region">
+        <item>全部大区</item>
+        <item>艾欧尼亚</item>
+        <item>祖安</item>
+        <item>诺克萨斯</item>
+        <item>班德尔城</item>
+        <item>皮尔特沃夫</item>
+        <item>战争学院</item>
+        <item>巨神峰</item>
+        <item>雷瑟守备</item>
+        <item>裁决之道</item>
+        <item>黑色玫瑰</item>
+        <item>暗影岛</item>
+        <item>钢铁烈阳</item>
+        <item>均衡教派</item>
+        <item>水晶之痕</item>
+        <item>影流</item>
+        <item>守望之海</item>
+        <item>征服之海</item>
+        <item>卡拉曼达</item>
+        <item>皮城警备</item>
+        <item>比尔吉沃特</item>
+        <item>德玛西亚</item>
+        <item>无畏先锋</item>
+        <item>恕瑞玛</item>
+        <item>扭曲丛林</item>
+        <item>巨龙之巢</item>
+        <item>教育专区</item>
+    </string-array>
 </resources>

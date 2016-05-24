@@ -1,5 +1,6 @@
 package com.lanou.guan.lolcatch.main.welcome;
 
+import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.BaseActivity;
 
 /**
@@ -8,7 +9,7 @@ import com.lanou.guan.lolcatch.main.base.BaseActivity;
 public class WelcomeActivity extends BaseActivity {
     @Override
     public int initLayout() {
-        return 0;
+        return R.layout.activity_welcome;
     }
 
     @Override

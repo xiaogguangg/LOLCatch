@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/smallText"
+    android:paddingRight="@dimen/smallText">
+    <ImageView
+        android:id="@+id/head_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/hero_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/morePagePadding"
+        android:textSize="@dimen/smallText"
+        android:layout_below="@id/head_iv"/>
+    <TextView
+        android:id="@+id/hero_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/morePagePadding"
+        android:textSize="5sp"
+        android:layout_below="@id/hero_name_tv"/>
+</RelativeLayout>

@@ -42,8 +42,8 @@ public class HeroFragment  extends BaseFragment {
     }
     public void initFragment(){
         fragments = new ArrayList<>();
-        fragments.add(new AllHeroFragment());
         fragments.add(new FreeHeroFragment());
         fragments.add(new MyHeroFragment());
+        fragments.add(new AllHeroFragment());
     }
 }

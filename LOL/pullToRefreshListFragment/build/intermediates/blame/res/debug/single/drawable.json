@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/res/merged/debug/drawable/indicator_bg_top.xml",
+        "source": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/exploded-aar/LOL/library/unspecified/res/drawable/indicator_bg_top.xml"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/res/merged/debug/drawable/indicator_bg_bottom.xml",
+        "source": "/Users/dllo/Desktop/A段/LOLCatch/LOL/pullToRefreshListFragment/build/intermediates/exploded-aar/LOL/library/unspecified/res/drawable/indicator_bg_bottom.xml"
+    }
+]

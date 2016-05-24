@@ -14,4 +14,11 @@ public class URLTool {
     public final static String INFORMATION_IMAGE_SECOND = "http://avatar.anzogame.com/pic_v1/lol/news/20160509/picad65506h573031f7.jpg";
     public final static String INFORMATION_IMAGE_THIRD = "http://avatar.anzogame.com/pic_v1/lol/news/20160504/picad65250h5729a7ea.jpg";
     public final static String INFORMATION_IMAGE_FOURTH = "http://avatar.anzogame.com/pic_v1/lol/news/20160517/picad63991h573af5e4.jpg";
+    public final static String COMMUNITY_USER_SHOW = "http://lol.zhangyoubao.com/apis/rest/UgcsService/getUserShows?order_kind=0&area=&page=1&sex=&i_=A100004553AB08&t_=1463797586310&p_=21275&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=19&cha=tencentMartket&u_=&modle_=vivo+Y913&%20HTTP/1.1Host:%20lol.zhangyoubao.comConnection:%20Keep-AliveUser-Agent:%20Paros/3.2.13";
+    public final static String COMMUNITY_PLAY_WAY_START="http://lol.zhangyoubao.com/apis/rest/PlaysService/userPlayList?order_kind=0&role_id=0&season=8&page=";
+    public final static String COMMUNITY_PLAY_WAY_END="&i_=A100004553AB08&t_=1464059906914&p_=23087&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=19&cha=tencentMartket&u_=&modle_=vivo+Y913& HTTP/1.1Host: lol.zhangyoubao.comConnection: Keep-AliveUser-Agent: Paros/3.2.13";
+    public final static String HERO="http://lolbox.duowan.com/phone/apiHeroes.php?OSType=iOS9.3.1&v=180&type=";
+    public final static String HERO_IMAGE_START ="http://box.dwstatic.com/skin/";
+    public final static String HERO_IMAGE_CENTER ="/";
+    public final static String HERO_IMAGE_END ="_0.jpg";
 }

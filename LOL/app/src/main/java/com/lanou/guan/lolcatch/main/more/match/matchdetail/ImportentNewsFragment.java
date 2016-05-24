@@ -1,4 +1,4 @@
-package com.lanou.guan.lolcatch.main.more;
+package com.lanou.guan.lolcatch.main.more.match.matchdetail;
 
 import android.view.View;
 
@@ -6,12 +6,12 @@ import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.BaseFragment;
 
 /**
- * Created by dllo on 16/5/14.
+ * Created by dllo on 16/5/23.
  */
-public class MoreFragment extends BaseFragment {
+public class ImportentNewsFragment extends BaseFragment {
     @Override
     protected int setLayout() {
-        return R.layout.fragment_more;
+        return R.layout.fragment_importentnews;
     }
 
     @Override

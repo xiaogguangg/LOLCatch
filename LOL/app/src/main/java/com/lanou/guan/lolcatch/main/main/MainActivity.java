@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lanou.guan.lolcatch.R;
@@ -15,7 +16,7 @@ import com.lanou.guan.lolcatch.main.base.BaseFragment;
 import com.lanou.guan.lolcatch.main.community.maincommunity.CommunityFragment;
 import com.lanou.guan.lolcatch.main.hero.mainhero.HeroFragment;
 import com.lanou.guan.lolcatch.main.information.maininformation.InformationFragment;
-import com.lanou.guan.lolcatch.main.more.MoreFragment;
+import com.lanou.guan.lolcatch.main.more.fragment.MoreFragment;
 import com.lanou.guan.lolcatch.main.video.mainvideo.video.VideoFragment;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private ImageButton downLoadIB;
     private Intent intent;
     private DrawerLayout drawerLayout;
+    private RelativeLayout logInLayout;
     @Override
     public int initLayout() {
         return R.layout.activity_main;
@@ -47,6 +49,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         downLoadIB = (ImageButton) findViewById(R.id.title_download_ib);
         radioGroup = (RadioGroup) findViewById(R.id.main_rg);
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawer);
+        logInLayout = (RelativeLayout) findViewById(R.id.log_in_layout);
+
     }
 
     @Override
@@ -58,6 +62,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         centerIB.setOnClickListener(this);
         checkIB.setOnClickListener(this);
         downLoadIB.setOnClickListener(this);
+        logInLayout.setOnClickListener(this);
         radioGroup.setOnCheckedChangeListener(new CheckedChangeListener());
         mainVP.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -162,6 +167,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             case R.id.title_center_ib:
                 drawerLayout.openDrawer(Gravity.LEFT);
                 break;
+            case R.id.log_in_layout:
+                intent.setClass(this,LogInActivity.class);
+                startActivity(intent);
 
         }
     }

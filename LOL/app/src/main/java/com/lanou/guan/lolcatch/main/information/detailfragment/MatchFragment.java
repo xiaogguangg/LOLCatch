@@ -14,15 +14,17 @@ import android.widget.ListView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.BaseFragment;
 import com.lanou.guan.lolcatch.main.base.MyClickListener;
 import com.lanou.guan.lolcatch.main.base.URLTool;
 import com.lanou.guan.lolcatch.main.base.VolleySingle;
+import com.lanou.guan.lolcatch.main.information.adapter.InformationDetailAdapter;
+import com.lanou.guan.lolcatch.main.information.adapter.ViewPagerAdapter;
 import com.lanou.guan.lolcatch.main.information.bean.Bean;
 import com.lanou.guan.lolcatch.main.information.maininformation.InformationDetailAty;
-import com.lanou.guan.lolcatch.main.information.adapter.ViewPagerAdapter;
-import com.lanou.guan.lolcatch.main.information.adapter.InformationDetailAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,12 +39,12 @@ import it.sephiroth.android.library.picasso.Picasso;
  */
 public class MatchFragment extends BaseFragment implements MyClickListener{
     private ListView listView;
+    private PullToRefreshListView pullToRefreshListView;
     private InformationDetailAdapter matchAdapter;
     private List<ImageView> imageViews;
     private ImageView imageView;
     private ViewPager imageVp;
     private Bean bean;
-    private int oldPosition = 0;
     private int currentItem;
     private ScheduledExecutorService scheduledExecutorService;
 
@@ -53,23 +55,37 @@ public class MatchFragment extends BaseFragment implements MyClickListener{
 
     @Override
     protected void initView(View view) {
-        listView = (ListView) view.findViewById(R.id.newest_lv);
+        pullToRefreshListView = (PullToRefreshListView) view.findViewById(R.id.newest_lv);
+        pullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
     }
 
     @Override
     protected void initData() {
+        listView = pullToRefreshListView.getRefreshableView();
         initImageView();
-        View view = LayoutInflater.from(this.context).inflate(R.layout.image_vp, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.image_vp, null);
         imageVp = (ViewPager) view.findViewById(R.id.all_vp);
         ViewPagerAdapter vpAdapter = new ViewPagerAdapter(imageViews);
         imageVp.setAdapter(vpAdapter);
         listView.addHeaderView(view);
         imageVp.setAdapter(vpAdapter);
         //______________________________
-        initResponse();
         matchAdapter = new InformationDetailAdapter(getContext());
-        listView.setAdapter(matchAdapter);
         matchAdapter.setClickListener(this);
+        listView.setAdapter(matchAdapter);
+        pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+                initResponse();
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                initResponse();
+            }
+        });
+
+
     }
 
     private void initResponse() {

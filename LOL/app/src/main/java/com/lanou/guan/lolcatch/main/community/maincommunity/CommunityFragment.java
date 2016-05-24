@@ -6,6 +6,7 @@ import android.widget.RelativeLayout;
 
 import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.BaseFragment;
+import com.lanou.guan.lolcatch.main.community.play_way.PlayWayActivity;
 import com.lanou.guan.lolcatch.main.community.usershow.UserActivity;
 
 /**
@@ -44,6 +45,8 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.equipment_click_layout:
+                intent.setClass(this.getActivity(), PlayWayActivity.class);
+                startActivity(intent);
                 break;
             case R.id.find_friend_click_layout:
                 break;

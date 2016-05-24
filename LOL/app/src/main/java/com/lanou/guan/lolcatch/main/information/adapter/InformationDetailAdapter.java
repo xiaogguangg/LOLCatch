@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.MyClickListener;
@@ -19,6 +19,11 @@ public class InformationDetailAdapter extends BaseAdapter {
     private Context context;
     private Bean bean;
     private MyClickListener clickListener;
+//    private int inCrease = bean.getData().size();
+//    public void setInCrease(int inCrease) {
+//        this.inCrease = inCrease;
+//        notifyDataSetChanged();
+//    }
 
     public void setClickListener(MyClickListener clickListener) {
         this.clickListener = clickListener;
@@ -50,15 +55,17 @@ public class InformationDetailAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         final ViewHolder viewHolder;
-        if (convertView == null){
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_information,parent,false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_information, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
-        }else {
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+
         viewHolder.titleTv.setText(bean.getData().get(position).getTitle());
         viewHolder.articleTv.setText(bean.getData().get(position).getDesc());
+
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,14 +74,16 @@ public class InformationDetailAdapter extends BaseAdapter {
         });
         return convertView;
     }
-    class ViewHolder{
-        VideoView videoView;
+
+    class ViewHolder {
+        ImageView iv;
         TextView titleTv;
         TextView articleTv;
+
         public ViewHolder(View itemView) {
             titleTv = (TextView) itemView.findViewById(R.id.newest_title_tv);
             articleTv = (TextView) itemView.findViewById(R.id.newest_article_tv);
-            videoView = (VideoView) itemView.findViewById(R.id.newest_vv);
+            iv = (ImageView) itemView.findViewById(R.id.newest_iv);
         }
     }
 }

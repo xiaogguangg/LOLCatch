@@ -14,6 +14,8 @@ import android.widget.ListView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.lanou.guan.lolcatch.R;
 import com.lanou.guan.lolcatch.main.base.BaseFragment;
 import com.lanou.guan.lolcatch.main.base.MyClickListener;
@@ -37,12 +39,13 @@ import it.sephiroth.android.library.picasso.Picasso;
  */
 public class NewestFragment extends BaseFragment implements MyClickListener{
     private ListView listView;
+    private PullToRefreshListView pullToRefreshListView;
     private InformationDetailAdapter newestAdapter;
     private List<ImageView> imageViews;
     private ImageView imageView;
     private ViewPager imageVp;
     private Bean bean;
-    private int oldPosition = 0;
+    private int id = 1;
     private int currentItem;
     private ScheduledExecutorService scheduledExecutorService;
 
@@ -53,13 +56,15 @@ public class NewestFragment extends BaseFragment implements MyClickListener{
 
     @Override
     protected void initView(View view) {
-        listView = (ListView) view.findViewById(R.id.newest_lv);
+        pullToRefreshListView = (PullToRefreshListView) view.findViewById(R.id.newest_lv);
+        pullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
     }
 
     @Override
     protected void initData() {
+        listView = pullToRefreshListView.getRefreshableView();
         initImageView();
-        View view = LayoutInflater.from(this.context).inflate(R.layout.image_vp, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.image_vp, null);
         imageVp = (ViewPager) view.findViewById(R.id.all_vp);
         ViewPagerAdapter vpAdapter = new ViewPagerAdapter(imageViews);
         imageVp.setAdapter(vpAdapter);
@@ -69,11 +74,32 @@ public class NewestFragment extends BaseFragment implements MyClickListener{
         initResponse();
         newestAdapter = new InformationDetailAdapter(getContext());
         newestAdapter.setClickListener(this);
+        pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+                listView.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        pullToRefreshListView.onRefreshComplete();
+                    }
+                }, 1000);
+            }
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                id++;
+                Log.d("NewestFragment", "id:" + id);
+                initResponse();
+                pullToRefreshListView.onRefreshComplete();
+
+            }
+
+        });
         listView.setAdapter(newestAdapter);
+
     }
 
     private void initResponse() {
-        VolleySingle.addRequest(URLTool.INFORMATION_NEWEST, new Response.ErrorListener() {
+        VolleySingle.addRequest("http://lol.zhangyoubao.com/apis/rest/ItemsService/lists?cattype=news&catid=10178&page="+id+"&i_=EAC1B788-00BC-454A-A9B9-460852CFC011&t_=1438745347&p_=18386&v_=40050303&d_=ios&osv_=8.3&version=0&a_=lol", new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
             }
